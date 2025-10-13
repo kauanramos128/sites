@@ -144,13 +144,19 @@
     </footer>
     
     <script>
-        // Função para enviar SMS
-        function sendSMS(productName) {
-            var phoneNumber = "+55 43 9981-1373";  // Número de telefone fornecido
-            var message = "Estou interessado no produto: " + productName;  // Mensagem personalizada
-            var smsURI = "sms:" + phoneNumber + "?body=" + encodeURIComponent(message);  // Cria a URI para SMS
-            window.location.href = smsURI;  // Abre o app de SMS
-        }
+        // Função para enviar mensagem via WhatsApp
+function sendWhatsApp(productName) {
+    var phoneNumber = "+55 43 99981-1373";  // Número de telefone fornecido
+    var message = "Estou interessado no produto: " + productName;  // Mensagem personalizada
+    
+    // Limpar o número de telefone: remover +, espaços e hífens
+    var cleanPhoneNumber = phoneNumber.replace(/[\+\s-]/g, '');
+    
+    // Criar o URI para WhatsApp
+    var whatsappURI = "https://wa.me/" + cleanPhoneNumber + "?text=" + encodeURIComponent(message);
+    
+    // Redirecionar para o URI do WhatsApp
+    window.location.href = whatsappURI;
         
         console.log('Site carregado com sucesso!');
     </script>
