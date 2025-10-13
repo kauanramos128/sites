@@ -102,7 +102,7 @@
                 <h2>Pod IGNET V400</h2>
                 <p>Preço: R$ 145,00</p>
                 <p>Descrição: Um pod avançado com alta performance e durabilidade.</p>
-                <button onclick="alert('Produto adicionado ao carrinho! Entre em contato para comprar.')">Comprar</button>
+                <button onclick="sendSMS('Pod IGNET V400')">Comprar</button>
             </div>
             
             <!-- Card do Produto 2 -->
@@ -111,7 +111,7 @@
                 <h2>Pod IGNET V300</h2>
                 <p>Preço: R$ 130,00</p>
                 <p>Descrição: Modelo intermediário com funcionalidades essenciais.</p>
-                <button onclick="alert('Produto adicionado ao carrinho! Entre em contato para comprar.')">Comprar</button>
+                <button onclick="sendSMS('Pod IGNET V300')">Comprar</button>
             </div>
             
             <!-- Card do Produto 3 -->
@@ -120,7 +120,7 @@
                 <h2>Pod IGNET V155</h2>
                 <p>Preço: R$ 120,00</p>
                 <p>Descrição: Opção básica e acessível para uso diário.</p>
-                <button onclick="alert('Produto adicionado ao carrinho! Entre em contato para comprar.')">Comprar</button>
+                <button onclick="sendSMS('Pod IGNET V155')">Comprar</button>
             </div>
         </div>
     </section>
@@ -144,7 +144,14 @@
     </footer>
     
     <script>
-        // Script simples para alertas
+        // Função para enviar SMS
+        function sendSMS(productName) {
+            var phoneNumber = "+554399811373";  // Número de telefone fornecido
+            var message = "Estou interessado no produto: " + productName;  // Mensagem personalizada
+            var smsURI = "sms:" + phoneNumber + "?body=" + encodeURIComponent(message);  // Cria a URI para SMS
+            window.location.href = smsURI;  // Abre o app de SMS
+        }
+        
         console.log('Site carregado com sucesso!');
     </script>
 </body>
