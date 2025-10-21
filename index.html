@@ -1,164 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TVS.pod - Vendas de Pods IGNET</title>
-    <style>
-        /* Estilos CSS básicos */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #007bff; /* Azul para o cabeçalho */
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        nav {
-            background-color: #f1f1f1;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .product-card {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 10px;
-            padding: 15px;
-            width: 300px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .product-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .product-card h2 {
-            font-size: 1.2em;
-            color: #007bff;
-        }
-        .product-card p {
-            font-size: 1em;
-            color: #666;
-        }
-        .product-card button {
-            background-color: #28a745; /* Verde para o botão */
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .product-card button:hover {
-            background-color: #218838;
-        }
-        footer {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Bem-vindo ao TVS.pod</h1>
-        <p>Seu site de vendas de Pods IGNET de qualidade!</p>
-    </header>
-    
-    <nav>
-        <a href="#products">Produtos</a>
-        <a href="#contact">Contato</a>
-    </nav>
-    
-    <section id="products">
-        <h2>Nossos Produtos</h2>
-        <div class="products">
-            <!-- Card do Produto 1 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300?text=Pod+IGNET+V400" alt="Pod IGNET V400">
-                <h2>Pod IGNET V400</h2>
-                <p>Preço: R$ 145,00</p>
-                <p>Descrição: Um pod avançado com alta performance e durabilidade.</p>
-                <button onclick="sendSMS('Pod IGNET V400')">Comprar</button>
-            </div>
-            
-            <!-- Card do Produto 2 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300?text=Pod+IGNET+V300" alt="Pod IGNET V300">
-                <h2>Pod IGNET V300</h2>
-                <p>Preço: R$ 130,00</p>
-                <p>Descrição: Modelo intermediário com funcionalidades essenciais.</p>
-                <button onclick="sendSMS('Pod IGNET V300')">Comprar</button>
-            </div>
-            
-            <!-- Card do Produto 3 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300?text=Pod+IGNET+V155" alt="Pod IGNET V155">
-                <h2>Pod IGNET V155</h2>
-                <p>Preço: R$ 120,00</p>
-                <p>Descrição: Opção básica e acessível para uso diário.</p>
-                <button onclick="sendSMS('Pod IGNET V155')">Comprar</button>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Entre em Contato</h2>
-        <p>Para fazer uma compra, envie um e-mail para: vendas@tvs.pod (ou substitua por seu e-mail real).</p>
-        <form action="mailto:vendas@tvs.pod" method="post" enctype="text/plain">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea><br><br>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 TVS.pod - Todos os direitos reservados.</p>
-    </footer>
-    
-    <script>
-        // Função para enviar mensagem via WhatsApp
-function sendWhatsApp(productName) {
-    var phoneNumber = "+55 43 99981-1373";  // Número de telefone fornecido
-    var message = "Estou interessado no produto: " + productName;  // Mensagem personalizada
-    
-    // Limpar o número de telefone: remover +, espaços e hífens
-    var cleanPhoneNumber = phoneNumber.replace(/[\+\s-]/g, '');
-    
-    // Criar o URI para WhatsApp
-    var whatsappURI = "https://wa.me/" + cleanPhoneNumber + "?text=" + encodeURIComponent(message);
-    
-    // Redirecionar para o URI do WhatsApp
-    window.location.href = whatsappURI;
-        
-        console.log('Site carregado com sucesso!');
-    </script>
-</body>
-</html>
+<!-- Card do Produto 1 -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300?text=Pod+IGNET+V400" alt="Pod IGNET V400">
+    <h2>Pod IGNET V400</h2>
+    <p>Preço: R$ 145,00</p>
+    <p>Descrição: Um pod avançado com alta performance e durabilidade.</p>
+    <button onclick="sendWhatsApp('Pod IGNET V400')">Comprar</button>
+</div>
+
+<!-- Card do Produto 2 -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300?text=Pod+IGNET+V300" alt="Pod IGNET V300">
+    <h2>Pod IGNET V300</h2>
+    <p>Preço: R$ 130,00</p>
+    <p>Descrição: Modelo intermediário com funcionalidades essenciais.</p>
+    <button onclick="sendWhatsApp('Pod IGNET V300')">Comprar</button>
+</div>
+
+<!-- Card do Produto 3 -->
+<div class="product-card">
+    <img src="https://via.placeholder.com/300?text=Pod+IGNET+V155" alt="Pod IGNET V155">
+    <h2>Pod IGNET V155</h2>
+    <p>Preço: R$ 120,00</p>
+    <p>Descrição: Opção básica e acessível para uso diário.</p>
+    <button onclick="sendWhatsApp('Pod IGNET V155')">Comprar</button>
+</div>
