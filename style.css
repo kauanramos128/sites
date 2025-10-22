@@ -1,9 +1,204 @@
-8 lines
+/* Variáveis de Cores (ML Style) */
+:root {
+    --amarelo-ml: #FFE600; /* Amarelo principal */
+    --azul-escuro: #3483fa; /* Azul dos links e botões */
+    --cinza-claro: #ebebeb; /* Fundo e bordas */
+    --preto-texto: #333333;
+    --verde-frete: #00a650;
+}
 
-.product-card img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do card */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Arredonda os cantos da imagem */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
-    margin-bottom: 10px; /* Espaço abaixo da imagem */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cinza-claro);
+}
+
+/* ---------------------- CABEÇALHO ---------------------- */
+
+.cabecalho {
+    background-color: var(--amarelo-ml);
+    padding: 10px 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.topo-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    color: var(--preto-texto);
+    font-size: 28px;
+    font-weight: bold;
+    /* Adicionar um estilo mais "ML" aqui se for uma imagem */
+}
+
+/* Barra de Busca */
+.barra-busca {
+    flex-grow: 1; /* Ocupa o espaço central */
+    max-width: 600px;
+    margin: 0 20px;
+    display: flex;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.barra-busca input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.barra-busca button {
+    background-color: white;
+    border: none;
+    padding: 10px 15px;
+    color: #999;
+    cursor: pointer;
+}
+
+.usuario-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.usuario-nav a {
+    text-decoration: none;
+    color: var(--preto-texto);
+    font-size: 14px;
+}
+
+/* Navegação de Categorias (Abaixo da busca) */
+.categorias-nav {
+    background-color: white;
+    border-top: 1px solid var(--cinza-claro);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.categorias-nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    padding: 10px 20px;
+    gap: 25px;
+}
+
+.categorias-nav a {
+    text-decoration: none;
+    color: var(--preto-texto);
+    font-size: 14px;
+}
+.categorias-nav a:hover {
+    color: var(--azul-escuro);
+}
+
+/* ---------------------- CONTEÚDO PRINCIPAL ---------------------- */
+
+.conteudo-principal {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Banner */
+.banner-destaque {
+    background-color: var(--azul-escuro); /* Cor de contraste */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Produtos Grid */
+.produtos-grid h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--preto-texto);
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de produtos */
+    gap: 15px;
+}
+
+.cartao-produto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: box-shadow 0.2s;
+}
+
+.cartao-produto:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-produto {
+    height: 180px;
+    background-color: var(--cinza-claro); /* Simula o placeholder da imagem */
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.preco {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--preto-texto);
+    margin-bottom: 5px;
+}
+
+.parcelamento {
+    font-size: 14px;
+    color: var(--verde-frete); /* Destaque */
+    margin-bottom: 5px;
+}
+
+.titulo-produto {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.frete {
+    font-size: 12px;
+    color: var(--verde-frete);
+    font-weight: bold;
+}
+
+.frete-nao {
+    color: #999; /* Cor menos chamativa para frete não grátis */
+    font-weight: normal;
+}
+
+/* ---------------------- RODAPÉ ---------------------- */
+
+.rodape {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid var(--cinza-claro);
+}
+
+.rodape p {
+    color: #666;
+    font-size: 12px;
 }
