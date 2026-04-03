@@ -1,21 +1,29 @@
+
+# **EBOOK INTERATIVO COMPLETO - 100% FUNCIONAL** 🚀
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganhe Dinheiro Online - Guia Completo do Zero | Ebook Profissional</title>
+    <title>💰 Ganhe Dinheiro Online - Guia Completo do Zero | Ebook Premium</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        /* VARIÁVEIS CSS - Design System */
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-            --dark: #1a1a2e;
-            --dark-secondary: #16213e;
-            --light: #f8fafc;
+            --success-gradient: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            --warning-gradient: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            --dark: #0f172a;
+            --dark-secondary: #1e293b;
+            --glass: rgba(255,255,255,0.92);
             --text-dark: #1e293b;
             --text-light: #64748b;
+            --shadow-lg: 0 25px 50px -12px rgba(0,0,0,0.25);
+            --shadow-glass: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         * {
@@ -25,29 +33,30 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', -apple-system, sans-serif;
             line-height: 1.7;
             background: var(--primary-gradient);
             min-height: 100vh;
             overflow-x: hidden;
         }
 
+        /* CONTAINER PRINCIPAL */
         .ebook-container {
             max-width: 1400px;
             margin: 0 auto;
             height: 100vh;
             display: flex;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            box-shadow: var(--shadow-lg);
             border-radius: 24px;
             overflow: hidden;
             backdrop-filter: blur(20px);
         }
 
-        /* Header */
+        /* HEADER PREMIUM */
         .header {
             background: var(--dark);
             color: white;
-            padding: 2.5rem;
+            padding: 3rem 2.5rem;
             flex-shrink: 0;
             text-align: center;
             position: relative;
@@ -57,12 +66,9 @@
         .header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             background: var(--primary-gradient);
-            opacity: 0.1;
+            opacity: 0.08;
         }
 
         .header-content {
@@ -71,65 +77,69 @@
         }
 
         .header h1 {
-            font-size: clamp(1.8rem, 5vw, 3rem);
-            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
             margin-bottom: 1rem;
             background: var(--success-gradient);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 400px;
+        .header-subtitle {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 450px;
             margin: 0 auto;
+            font-weight: 500;
         }
 
-        /* Sidebar Navigation */
+        /* SIDEBAR - MENU DE CAPÍTULOS */
         .sidebar {
-            background: rgba(255,255,255,0.95);
+            background: var(--glass);
             backdrop-filter: blur(20px);
-            width: 320px;
+            width: 340px;
             flex-shrink: 0;
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 2rem;
             overflow-y: auto;
             position: sticky;
             height: 100vh;
-            top: 0;
         }
 
-        .sidebar h3 {
+        .sidebar-header {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
             color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1.25rem;
+            font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
         }
 
         .chapters-list {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
         .chapter-btn {
             background: white;
             border: 2px solid #e2e8f0;
-            padding: 1rem 1.25rem;
-            border-radius: 16px;
-            font-size: 0.95rem;
+            padding: 1.25rem 1.5rem;
+            border-radius: 20px;
+            font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             color: var(--text-dark);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.25rem;
             position: relative;
             overflow: hidden;
         }
@@ -140,15 +150,15 @@
             left: 0;
             top: 0;
             bottom: 0;
-            width: 4px;
+            width: 5px;
             background: var(--primary-gradient);
             transform: scaleY(0);
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
         }
 
         .chapter-btn:hover {
-            transform: translateX(8px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            transform: translateX(12px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.25);
             border-color: #c7d2fe;
         }
 
@@ -156,6 +166,7 @@
             background: var(--primary-gradient);
             color: white;
             border-color: transparent;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
         }
 
         .chapter-btn.active::before {
@@ -163,45 +174,48 @@
             background: var(--success-gradient);
         }
 
-        .chapter-btn i {
-            font-size: 1.1rem;
-            width: 20px;
-            opacity: 0.7;
+        .chapter-icon {
+            font-size: 1.25rem;
+            width: 24px;
+            opacity: 0.8;
+            flex-shrink: 0;
         }
 
-        .chapter-btn.active i {
+        .chapter-btn.active .chapter-icon {
             opacity: 1;
         }
 
-        /* Main Content */
+        /* CONTEÚDO PRINCIPAL */
         .main-content {
             flex: 1;
-            background: rgba(255,255,255,0.97);
+            background: var(--glass);
             overflow-y: auto;
-            padding: 3rem;
+            padding: 3.5rem 3rem 4rem;
             position: relative;
         }
 
+        /* BARRA DE PROGRESSO */
         .progress-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e2e8f0;
+            gap: 1.25rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f1f5f9;
         }
 
         .progress-text {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--text-light);
-            font-weight: 500;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
-        .progress-bar {
+        .progress-container {
             flex: 1;
-            height: 6px;
+            height: 8px;
             background: #e2e8f0;
-            border-radius: 3px;
+            border-radius: 4px;
             overflow: hidden;
         }
 
@@ -209,112 +223,194 @@
             height: 100%;
             background: var(--success-gradient);
             width: 0%;
-            border-radius: 3px;
-            transition: width 0.4s ease;
+            border-radius: 4px;
+            transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        /* Chapters */
+        /* CAPÍTULOS */
         .chapter {
             display: none;
-            animation: slideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .chapter.active {
             display: block;
         }
 
-        @keyframes slideIn {
+        @keyframes slideInUp {
             from {
                 opacity: 0;
-                transform: translateX(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
-                transform: translateX(0);
+                transform: translateY(0);
             }
         }
 
         .chapter-title {
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 700;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 800;
             color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            margin-bottom: 2rem;
+            line-height: 1.15;
         }
 
         .chapter-title span {
             background: var(--primary-gradient);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .content-section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
 
         .content-section h3 {
-            font-size: 1.6rem;
+            font-size: 1.75rem;
             color: var(--dark);
-            margin: 2rem 0 1rem 0;
-            font-weight: 600;
+            margin: 2.5rem 0 1.25rem;
+            font-weight: 700;
         }
 
         .content-section p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text-dark);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
             text-align: justify;
         }
 
+        /* CAIXAS DE DESTAQUE */
         .highlight-box {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            background: var(--warning-gradient);
             border: 1px solid #fcd34d;
-            border-radius: 16px;
-            padding: 2rem;
-            margin: 2.5rem 0;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 3rem 0;
             position: relative;
+            overflow: hidden;
         }
 
         .highlight-box::before {
             content: '💡';
             position: absolute;
-            top: -10px;
-            left: 20px;
+            top: -12px;
+            left: 2.5rem;
             background: white;
-            padding: 0 12px;
-            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            font-size: 1.4rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .highlight-box strong {
             color: #92400e;
+            font-size: 1.2rem;
         }
 
         .action-box {
             background: var(--success-gradient);
             color: white;
-            border-radius: 16px;
-            padding: 2rem;
-            margin: 3rem 0;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 4rem 0;
             text-align: center;
         }
 
         .action-box h4 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
         }
 
-        /* Mobile Responsive */
-        @media (max-width: 1024px) {
-            .sidebar {
-                width: 280px;
-            }
+        /* BOTÕES DE NAVEGAÇÃO FIXOS */
+        .nav-controls {
+            position: fixed;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 1.25rem;
+            background: var(--glass);
+            padding: 1.25rem 2.5rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow-glass);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .nav-btn {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 140px;
+            justify-content: center;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-btn.prev { background: var(--dark-secondary); }
+        .nav-btn.next { background: var(--success-gradient); }
+        .nav-btn.home { background: var(--secondary-gradient); }
+
+        /* BOTÃO VOLTAR AO TOPO */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 140px;
+            right: 2.5rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: var(--success-gradient);
+            color: white;
+            border: none;
+            font-size: 1.25rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+        }
+
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-10px);
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 1200px) {
+            .sidebar { width: 300px; }
         }
 
         @media (max-width: 768px) {
             .ebook-container {
                 flex-direction: column;
-                height: auto;
+                height: 100vh;
                 border-radius: 20px;
                 margin: 1rem;
             }
@@ -322,191 +418,140 @@
             .sidebar {
                 width: 100%;
                 height: auto;
-                padding: 1.5rem;
+                padding: 2rem 1.5rem;
                 order: 2;
             }
 
             .chapters-list {
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 0.75rem;
+                gap: 1rem;
             }
 
             .chapter-btn {
-                flex: 1;
-                min-width: 140px;
-                padding: 1rem;
-                font-size: 0.9rem;
+                flex: 1 1 160px;
+                padding: 1rem 1rem;
+                font-size: 0.95rem;
                 justify-content: center;
+                text-align: center;
             }
 
             .main-content {
-                padding: 2rem 1.5rem;
+                padding: 2.5rem 2rem;
                 order: 1;
             }
 
             .header {
                 padding: 2rem 1.5rem;
             }
+
+            .nav-controls {
+                bottom: 1.5rem;
+                padding: 1rem 1.5rem;
+                gap: 0.75rem;
+                flex-wrap: wrap;
+            }
+
+            .nav-btn {
+                padding: 0.875rem 1.25rem;
+                font-size: 0.95rem;
+                min-width: 110px;
+            }
+
+            .scroll-top-btn {
+                bottom: 120px;
+                right: 1.5rem;
+            }
         }
 
-        /* Custom Scrollbar */
+        /* SCROLLBAR CUSTOMIZADA */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 10px;
         }
 
         ::-webkit-scrollbar-track {
             background: rgba(0,0,0,0.05);
+            border-radius: 5px;
         }
 
         ::-webkit-scrollbar-thumb {
             background: var(--primary-gradient);
-            border-radius: 4px;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-gradient);
         }
     </style>
 </head>
 <body>
     <div class="ebook-container">
-        <!-- Header -->
+        <!-- HEADER -->
         <div class="header">
             <div class="header-content">
                 <h1><i class="fas fa-rocket"></i><br>Ganhe Dinheiro<br><span>Online</span></h1>
-                <p>Guia Completo do Zero ao Profissional<br>17 Capítulos Práticos • Zero Investimento Inicial</p>
+                <p class="header-subtitle">Guia Completo do Zero ao Profissional • 17 Capítulos Práticos • Zero Investimento Inicial</p>
             </div>
         </div>
 
-        <!-- Sidebar Navigation -->
+        <!-- SIDEBAR - MENU CAPÍTULOS -->
         <div class="sidebar">
-            <h3><i class="fas fa-list-ul"></i> Sumário</h3>
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">
+                    <i class="fas fa-list-ol"></i>
+                    Sumário Executivo
+                </h2>
+            </div>
             <div class="chapters-list" id="chaptersList">
-                <!-- Botões serão inseridos via JavaScript -->
+                <!-- Botões gerados via JavaScript -->
             </div>
         </div>
 
-        <!-- Main Content -->
+        <!-- CONTEÚDO PRINCIPAL -->
         <div class="main-content">
+            <!-- BARRA DE PROGRESSO -->
             <div class="progress-header">
                 <span class="progress-text" id="progressText">Capítulo 1 de 17</span>
-                <div class="progress-bar">
+                <div class="progress-container">
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
             </div>
 
-            <!-- Capítulos -->
+            <!-- CAPÍTULO 1 -->
             <section id="cap1" class="chapter active">
-                <h1 class="chapter-title">1. O Novo Mundo Digital<span><br>Por Que Nunca Foi Tão Fácil</span></h1>
+                <h1 class="chapter-title">1. O Novo Mundo Digital<span>Por Que Nunca Foi Tão Fácil</span></h1>
                 <div class="content-section">
                     <div class="highlight-box">
-                        <strong>2024 é o MELHOR momento da história para ganhar dinheiro online!</strong><br>
-                        5,4 bilhões de pessoas na internet • R$ 200 bi/ano em e-commerce brasileiro
+                        <strong>2024 = MAIOR OPORTUNIDADE DA HISTÓRIA!</strong><br>
+                        5,4B pessoas online • R$ 200B/ano e-commerce BR • 70% via celular
                     </div>
-                    <p>Smartphones nas mãos de todos, plataformas gratuitas e demanda infinita por soluções digitais. Você está entrando no maior mercado do mundo no momento certo.</p>
+                    <p>Você está entrando no maior mercado do planeta exatamente no momento certo. Plataformas gratuitas + demanda infinita = oportunidade única.</p>
                 </div>
                 <div class="action-box">
-                    <h4><i class="fas fa-fire"></i> MOTIVAÇÃO</h4>
-                    <p>Se eu consegui do zero, você também consegue!</p>
+                    <h4><i class="fas fa-fire"></i> PRIMEIRO PASSO</h4>
+                    <p>Dedique 30min hoje e comece sua transformação financeira</p>
                 </div>
             </section>
 
+            <!-- CAPÍTULO 2 -->
             <section id="cap2" class="chapter">
-                <h1 class="chapter-title">2. Mentalidade de Quem Sai do Zero<span>Como Pensar Diferente</span></h1>
+                <h1 class="chapter-title">2. Mentalidade de Quem Sai do Zero<span>Pensar Diferente</span></h1>
                 <div class="content-section">
-                    <h3>🔥 Os 3 Mindsets Essenciais</h3>
-                    <p><strong>1. Jogador, não espectador:</strong> Teste → Aprenda → Ajuste → Repita</p>
-                    <p><strong>2. Foco no problema do cliente:</strong> Dinheiro segue valor entregue</p>
-                    <p><strong>3. Consistência > Intensidade:</strong> 1h/dia por 90 dias = transformação</p>
+                    <h3>🧠 4 Mindsets dos Vencedores:</h3>
+                    <p><strong>1. Executor:</strong> Testa HOJE, ajusta AMANHÃ</p>
+                    <p><strong>2. Cliente-centrado:</strong> Resolve problemas reais</p>
+                    <p><strong>3. Consistente:</strong> 1h/dia > 10h/semana</p>
+                    <p><strong>4. Otimista realista:</strong> Falha = feedback</p>
                 </div>
             </section>
 
+            <!-- CAPÍTULO 3 -->
             <section id="cap3" class="chapter">
-                <h1 class="chapter-title">3. O Que Você Precisa Para Começar<span>(Mesmo Sem Dinheiro)</span></h1>
+                <h1 class="chapter-title">3. Setup Zero Investimento<span>Tudo GRATUITO</span></h1>
                 <div class="content-section">
-                    <h3>✅ Lista Mínima (R$0)</h3>
-                    <ul style="font-size: 1.1rem; margin-left: 2rem; margin-bottom: 1.5rem;">
-                        <li>✅ Celular com internet</li>
-                        <li>✅ WhatsApp Business (grátis)</li>
-                        <li>✅ Canva (grátis)</li>
-                        <li>✅ Instagram</li>
-                        <li>✅ Conta digital (Nubank/PicPay)</li>
-                    </ul>
-                    <div class="highlight-box">
-                        <strong>Resultado: Setup completo em 15 minutos!</strong>
-                    </div>
-                </div>
-            </section>
-
-            <section id="cap4" class="chapter">
-                <h1 class="chapter-title">4. Os Maiores Erros de Iniciantes<span>Que Fazem Desistir Rápido</span></h1>
-                <div class="content-section">
-                    <h3>❌ Erro #1: Comprar curso caro sem validar</h3>
-                    <h3>❌ Erro #2: Querer tudo perfeito antes de começar</h3>
-                    <h3>❌ Erro #3: Copiar gurus ao invés de testar</h3>
-                    <h3>❌ Erro #4: Desistir na primeira semana</h3>
-                    <div class="action-box">
-                        <h4>Regra de Ouro: Teste com R$0 → Valide → Invista</h4>
-                    </div>
-                </div>
-            </section>
-
-            <section id="cap5" class="chapter">
-                <h1 class="chapter-title">5. Formas Reais de Ganhar Dinheiro Online<span>Visão Geral Completa</span></h1>
-                <div class="content-section">
-                    <h3>💰 Modelo 1: Afiliados (R$50-2.000/comissão)</h3>
-                    <h3>💰 Modelo 2: Serviços (R$97-997/cliente)</h3>
-                    <h3>💰 Modelo 3: Conteúdo (R$1.000-10.000/mês)</h3>
-                    <h3>💰 Modelo 4: Produtos digitais (90% margem)</h3>
-                </div>
-            </section>
-
-            <section id="cap6" class="chapter">
-                <h1 class="chapter-title">6. Como Ganhar Dinheiro com o Celular<span>Métodos Práticos</span></h1>
-                <div class="content-section">
-                    <div class="highlight-box">
-                        <strong>Meta Semana 1: R$97 com WhatsApp</strong>
-                    </div>
-                    <p>Stories → DM → Oferta → Pagamento → Entrega. 4 passos, 15 minutos/dia.</p>
-                </div>
-            </section>
-
-            <section id="cap7" class="chapter">
-                <h1 class="chapter-title">7. Introdução ao Marketing Digital<span>Como Vender na Internet</span></h1>
-                <div class="content-section">
-                    <h3>📈 Fórmula AIDA Simples</h3>
-                    <p>Atenção → Interesse → Desejo → Ação</p>
-                </div>
-            </section>
-
-            <section id="cap8" class="chapter">
-                <h1 class="chapter-title">8. Como Escolher um Nicho Lucrativo<span>O que Realmente Vende</span></h1>
-                <div class="content-section">
-                    <h3>🔥 Nichos Testados que Vendem:</h3>
-                    <p>Emagrecimento • Finanças • Relacionamentos • Marketing • Idiomas</p>
-                </div>
-            </section>
-
-            <section id="cap9" class="chapter">
-                <h1 class="chapter-title">9. Criando Conteúdo que Atrai Pessoas<span>Estratégias Simples</span></h1>
-                <div class="content-section">
-                    <p>3 tipos: Educativo (80%) • Inspiracional (15%) • Promocional (5%)</p>
-                </div>
-            </section>
-
-            <section id="cap10" class="chapter">
-                <h1 class="chapter-title">10. Redes Sociais<span>Sua Máquina de Vendas</span></h1>
-                <div class="content-section">
-                    <h3>📱 Instagram: 3 Stories/dia</h3>
-                    <h3>🎥 TikTok: 1 vídeo/dia</h3>
-                </div>
-            </section>
-
-            <section id="cap11" class="chapter">
-                <h1 class="chapter-title">11. Como Fazer Sua Primeira Venda<span>Passo a Passo</span></h1>
-                <div class="content-section">
-                    <div class="highlight-box">
-                        <strong>Script WhatsApp que converte 30%:</strong><br>
-                        "Oi [nome]! Vi que você quer [problema]. Tenho solução por R$97. Quer ver?"
-                    </div>
-                </div>
-            </section>
-
-            <section
+                    <h3>✅ Checklist 15min:</h3>
+                    <ul style="font-size: 1.2rem; margin-left: 2.5rem; margin-bottom: 2rem;">
+                        <li><i class="fas fa-check-circle text-success"></i> Celular + internet</li>
+                        <li><i class="fas fa-check-circle text-success"></i> WhatsApp Business</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Canva Pro (trial)</li>
+                        <li><i class="fas fa-check-circle text-success"></i> Instagram perfil
